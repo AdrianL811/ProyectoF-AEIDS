@@ -1,19 +1,4 @@
-"""
-Sistema de Inventario — Arquitectura MVC + 3 Patrones (Singleton, Observer, Strategy)
 
-Mejoras frente al original y al refactor previo:
-- Mantiene GUI con CustomTkinter y agrega **módulos faltantes**: Proveedores, Usuarios y Recepciones.
-- **Alertas** de stock bajo y próxima caducidad.
-- **Estrategias de exportación** (Excel/CSV) reutilizables en Productos y Proveedores.
-- **Correcciones**: manejo de `Scrollbar`, selección segura de filas, validaciones y mensajes.
-- **Tests rápidos** sin GUI con `--selftest` (CRUD + ajuste + alertas).
-
-Requisitos (venv):
-  pip install customtkinter pymongo openpyxl python-dotenv
-
-Variables de entorno opcionales:
-  MONGO_URI=...   DB_NAME=supermercado
-"""
 
 from __future__ import annotations
 import os
@@ -625,3 +610,4 @@ if __name__ == "__main__":
     bus = EventBus(); controller = InventarioController(bus)
     ui = MainView(controller)
     ui.run()
+
